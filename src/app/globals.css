@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+  @apply bg-black;
+}
+body{
+    @apply select-none h-auto overflow-x-hidden w-full
+}
+
+* {
+  @apply p-0 m-0 box-border;
+}
+::-webkit-scrollbar {
+  @apply w-1 text-red-600 transition-all duration-[.4s] ease-linear;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-red-500 rounded w-1 transition-all duration-[.4s] ease-linear;
+}
+::-webkit-scrollbar-track {
+  @apply bg-black rounded w-1;
+}
+
+#snow {
+  position: fixed;
+  z-index: -1
+}

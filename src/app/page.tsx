@@ -1,11 +1,9 @@
-import { Inter } from 'next/font/google';
-
-const inter = Inter({ subsets: ['latin'] });
+import SnowParticles from '@/components/SnowParticles';
 
 export default function Home() {
   return (
-    <h1 className={`${inter.className} text-black font-bold`}>
-      Hello, Next.js!
-    </h1>
+    <>
+      <SnowParticles />
+    </>
   );
 }
