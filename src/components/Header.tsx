@@ -3,24 +3,12 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
-import {
-  AiOutlineHome,
-  AiOutlineMail,
-  AiOutlineFolderOpen,
-  AiOutlineClose
-} from 'react-icons/ai';
+import { AiOutlineClose } from 'react-icons/ai';
 import { CgMenuRight } from 'react-icons/cg';
-import { MdEmojiPeople } from 'react-icons/md';
 
+import { links } from '@/constants/links';
 import useMediaQuery from '@/hooks/useMediaQuery';
 import { motion } from 'framer-motion';
-
-const links = [
-  { id: 1, href: '/', label: 'Home', icon: AiOutlineHome },
-  { id: 2, href: '/about', label: 'Sobre mim', icon: MdEmojiPeople },
-  { id: 3, href: '/projects', label: 'Projetos', icon: AiOutlineFolderOpen },
-  { id: 4, href: '/contact', label: 'Contato', icon: AiOutlineMail }
-];
 
 const variants = {
   open: { opacity: 1, x: 0 },
@@ -113,50 +101,3 @@ const Header = () => {
 };
 
 export default Header;
-
-{
-  /* <header className="relative w-full py-5 flex justify-end">
-          <button
-            onClick={() => setIsOpen(true)}
-            className="transition-all duration-200"
-          >
-            <CgMenuRight
-              size={24}
-              className="text-white transition-all duration-200 hover:text-white/60"
-            />
-          </button>
-          {isOpen && (
-            <nav className="animate-slide-bottom absolute top-0 w-full bg-black h-screen z-10 p-10">
-              <button
-                onClick={() => setIsOpen(false)}
-                className="transition-all duration-200 block ml-auto"
-              >
-                <AiOutlineClose
-                  size={24}
-                  className="text-white transition-all duration-200 hover:text-white/60"
-                />
-              </button>
-              <ul className="flex flex-col gap-5 items-center justify-center h-full">
-                {links.map(({ id, href, icon: Icon, label }) => (
-                  <li
-                    key={id}
-                    className={`${href === pathName ? 'underline' : ''}`}
-                  >
-                    <Link
-                      href={href}
-                      className={`flex items-center gap-2 font-bold text-2xl transition-all duration-200 ${
-                        href === pathName
-                          ? 'text-red-500 hover:text-red-400'
-                          : 'text-white hover:text-white/70'
-                      }`}
-                    >
-                      <Icon size={24} />
-                      {label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </nav>
-          )}
-        </header> */
-}
