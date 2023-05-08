@@ -20,7 +20,7 @@ const SnowParticles = () => {
           zIndex: '-1'
         },
         background: {
-          color: '#000'
+          color: '#18181B'
         },
         particles: {
           color: {

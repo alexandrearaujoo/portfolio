@@ -26,7 +26,7 @@ const Socials = () => {
               {' '}
               <Icon
                 size={24}
-                className="text-white/60 transition-all duration-200 hover:text-white"
+                className="text-white transition-all duration-200 hover:text-white/60"
               />{' '}
             </Link>
           ))}
@@ -36,7 +36,7 @@ const Socials = () => {
           {links.map(({ id, href, icon: Icon }) => (
             <Link href={href} key={id} target="_blank">
               {' '}
-              <Icon size={24} className="text-white/60" />{' '}
+              <Icon size={24} className="text-white" />{' '}
             </Link>
           ))}
         </footer>

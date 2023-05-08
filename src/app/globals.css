@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 html {
-  @apply bg-black;
+  @apply bg-zinc-900;
 }
 body{
-    @apply select-none h-auto overflow-x-hidden w-full
+    @apply select-none h-screen overflow-x-hidden w-full 
 }
 
 * {
