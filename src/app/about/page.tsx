@@ -1,6 +1,5 @@
 import Image from 'next/image';
 
-import DownloadCVButton from '@/components/DownloadCV';
 import SectionTitle from '@/components/SectionTitle';
 
 import { skills } from '@/constants/skills';
@@ -22,7 +21,13 @@ export default function About() {
             colaborativo, que adora trabalhar em equipe para alcançar objetivos
             ambiciosos.
           </p>
-          <DownloadCVButton />
+          <a
+            className="p-5 bg-red-500 text-white text-center font-normal text-xl rounded-md max-w-xs transition-all duration-200 hover:bg-red-400"
+            href="/CV Alexandre Araujo.pdf"
+            download="CV Alexandre Araujo"
+          >
+            Download CV
+          </a>
         </article>
         <div>
           <Image
