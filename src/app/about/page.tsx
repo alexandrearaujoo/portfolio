@@ -42,11 +42,12 @@ export default function About() {
       <SectionTitle title="Minhas Habilidades" />
       <section className="pb-10">
         <ul className="grid grid-cols-auto-fit gap-5">
-          {skills.map(({ hoverColor, icon: Icon, id, name }) => (
+          {skills.map(({ color, icon: Icon, id, name }) => (
             <li key={id} className="flex flex-col items-center gap-2">
               <Icon
                 size={50}
-                className={`text-white transition-all duration-200 hover:text-[${hoverColor}]`}
+                color={color}
+                className="transition-all duration-200 hover:opacity-50"
               />
               <span className="text-white">{name.split(' ')}</span>
             </li>
