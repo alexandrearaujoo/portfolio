@@ -11,7 +11,9 @@ import {
   SiJest,
   SiPostgresql,
   SiMongodb,
-  SiCss3
+  SiCss3,
+  SiPython,
+  SiDjango
 } from 'react-icons/si';
 import { TbBrandNextjs } from 'react-icons/tb';
 
@@ -93,12 +95,24 @@ export const skills = [
   },
   {
     id: 14,
+    name: 'Python',
+    icon: SiPython,
+    hoverColor: '#306998'
+  },
+  {
+    id: 15,
+    name: 'Django',
+    icon: SiDjango,
+    hoverColor: '#092e20'
+  },
+  {
+    id: 16,
     name: 'HTML5',
     icon: AiFillHtml5,
     hoverColor: '#E44D26'
   },
   {
-    id: 15,
+    id: 17,
     name: 'CSS3',
     icon: SiCss3,
     hoverColor: '#264DE4'
