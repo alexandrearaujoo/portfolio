@@ -8,9 +8,9 @@ const SectionTitle = ({ title }: SectionTitleProps) => {
   return (
     <section className="flex flex-col items-center justify-center gap-4 my-20">
       <div className="flex items-center gap-2 justify-center">
-        <h1 className="text-white font-normal text-5xl">{titleSplited[0]}</h1>
-        <h1 className="text-red-500 font-normal text-5xl truncate w-2/4 sm:w-full">
-          {titleSplited[1]}
+        <h1 className="text-white font-normal text-3xl md:text-5xl flex gap-2">
+          {titleSplited[0]}{' '}
+          <span className="text-red-500 font-normal">{titleSplited[1]}</span>
         </h1>
       </div>
     </section>
