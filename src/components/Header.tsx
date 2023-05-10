@@ -23,6 +23,10 @@ const Header = ({ lang }: { lang: string }) => {
   const [isOpenLanguage, setIsOpenLanguage] = useState(false);
   const { t } = useTranslation(lang, 'home');
 
+  const pathnameToRedirect = pathName.split('/')[2]
+    ? pathName.split('/')[2]
+    : '';
+
   return (
     <>
       <header className="hidden md:flex py-5 w-full justify-end">
@@ -64,13 +68,13 @@ const Header = ({ lang }: { lang: string }) => {
               {isOpenLanguage && (
                 <div className="absolute top-6 right-0 bg-white shadow-md rounded-md p-2 flex flex-col gap-2">
                   <Link
-                    href={`/en/${pathName.split('/')[2]}`}
+                    href={`/en/${pathnameToRedirect}`}
                     className="font-bold transition duration-200 p-1 rounded-md hover:bg-gray-300"
                   >
                     {t('english')}
                   </Link>
                   <Link
-                    href={`/pt/${pathName.split('/')[2]}`}
+                    href={`/pt/${pathnameToRedirect}`}
                     className="font-bold transition duration-200 p-1 rounded-md hover:bg-gray-300"
                   >
                     {t('portuguese')}
@@ -116,6 +120,7 @@ const Header = ({ lang }: { lang: string }) => {
                       ? 'text-red-500 hover:text-red-400'
                       : 'text-white hover:text-white/70'
                   }`}
+                  onClick={() => setIsOpen(false)}
                 >
                   <Icon size={24} />
                   {t(label)}
@@ -139,13 +144,13 @@ const Header = ({ lang }: { lang: string }) => {
               {isOpenLanguage && (
                 <div className="absolute top-10 right-0 bg-white w-32 shadow-md rounded-md p-2 flex flex-col gap-2">
                   <Link
-                    href={`/en/${pathName.split('/')[2]}`}
+                    href={`/en/${pathnameToRedirect}`}
                     className="font-bold transition duration-200 p-1 rounded-md hover:bg-gray-300"
                   >
                     {t('english')}
                   </Link>
                   <Link
-                    href={`/pt/${pathName.split('/')[2]}`}
+                    href={`/pt/${pathnameToRedirect}`}
                     className="font-bold transition duration-200 p-1 rounded-md hover:bg-gray-300"
                   >
                     {t('portuguese')}
