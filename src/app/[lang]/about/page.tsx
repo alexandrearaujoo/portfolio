@@ -1,6 +1,9 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 import SectionTitle from '@/components/SectionTitle';
+
+import ProfileImage from '../../../../public/images/profile-photo.jpg';
 
 import { skills } from '@/constants/skills';
 import { useTranslation } from '@/i18n';
@@ -21,21 +24,22 @@ export default async function About({
             {t('i-am')} <span className="text-red-500">{t('position')}</span>
           </h1>
           <p className="text-white text-2xl">{t('about-me')}</p>
-          <a
+          <Link
             className="p-5 bg-red-500 text-white text-center font-normal text-xl rounded-md max-w-xs transition-all duration-200 hover:bg-red-400"
-            href="/CV Alexandre Araujo.pdf"
-            download="CV Alexandre Araujo"
+            href={process.env.NEXT_PUBLIC_CV_LINK as string}
+            target="_blank"
           >
-            Download CV
-          </a>
+            {t('cv')}
+          </Link>
         </article>
         <div>
           <Image
-            src="/images/profile-photo.jpg"
+            src={ProfileImage}
             alt="Profile Photo"
             priority
             width={300}
             height={300}
+            draggable={false}
             className="rounded-md"
           />
         </div>
