@@ -2,10 +2,10 @@
 
 import Typewriter from 'typewriter-effect';
 
-const Positions = () => {
+const Positions = ({ translate }: { translate: string }) => {
   return (
     <div className="flex gap-2 items-center text-white text-2xl">
-      <h2>Eu sou</h2>
+      <h2>{translate}</h2>
       <Typewriter
         options={{
           loop: true,

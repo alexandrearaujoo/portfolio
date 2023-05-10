@@ -6,8 +6,8 @@ import {
 import { MdEmojiPeople } from 'react-icons/md';
 
 export const links = [
-  { id: 1, href: '/', label: 'Home', icon: AiOutlineHome },
-  { id: 2, href: '/about', label: 'Sobre mim', icon: MdEmojiPeople },
-  { id: 3, href: '/projects', label: 'Projetos', icon: AiOutlineFolderOpen },
-  { id: 4, href: '/contact', label: 'Contato', icon: AiOutlineMail }
+  { id: 1, href: '', label: 'home', icon: AiOutlineHome },
+  { id: 2, href: '/about', label: 'about-me', icon: MdEmojiPeople },
+  { id: 3, href: '/projects', label: 'projects', icon: AiOutlineFolderOpen },
+  { id: 4, href: '/contact', label: 'contact', icon: AiOutlineMail }
 ];

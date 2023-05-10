@@ -5,25 +5,28 @@ import { AiOutlineUser, AiOutlineMail, AiOutlineMessage } from 'react-icons/ai';
 import Input from './Input';
 
 import { useContactForm } from '@/hooks/useContactForm';
+import { useTranslation } from '@/i18n/client';
 
-const ContactForm = () => {
+const ContactForm = ({ lang }: { lang: string }) => {
   const { errors, handleSubmit, isSubmitting, onSubmit, register } =
     useContactForm();
+
+  const { t } = useTranslation(lang, 'contact');
 
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
       className="w-full max-w-lg flex flex-col items-center gap-5"
     >
-      <h1 className="text-white font-semibold text-3xl">Me mande um email</h1>
+      <h1 className="text-white font-semibold text-3xl">{t('subtitle')}</h1>
       <Input
-        label="Name"
+        label={t('name')}
         icon={AiOutlineUser}
         error={errors.name?.message}
         {...register('name')}
       />
       <Input
-        label="Your Email"
+        label={t('email')}
         icon={AiOutlineMail}
         error={errors.email?.message}
         {...register('email')}
@@ -41,7 +44,7 @@ const ContactForm = () => {
           htmlFor="Message"
           className="absolute flex gap-2 text-md text-white duration-150 transform -translate-y-3 scale-75 top-4 z-10 origin-[0] left-3 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-3"
         >
-          <AiOutlineMessage className="w-5 h-5 text-white" /> Message{' '}
+          <AiOutlineMessage className="w-5 h-5 text-white" /> {t('message')}{' '}
           {errors.message?.message && (
             <span className="text-orange-500">
               {' '}
@@ -53,9 +56,9 @@ const ContactForm = () => {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="p-5 bg-red-500 text-white w-full rounded-xl disabled:cursor-not-allowed disabled:opacity-50"
+        className="p-5 bg-red-500 text-white w-full rounded-xl transition duration-150 hover:opacity-80 disabled:cursor-not-allowed disabled:opacity-50"
       >
-        Enviar
+        {t('send')}
       </button>
     </form>
   );

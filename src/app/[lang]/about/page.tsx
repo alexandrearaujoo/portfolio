@@ -3,24 +3,24 @@ import Image from 'next/image';
 import SectionTitle from '@/components/SectionTitle';
 
 import { skills } from '@/constants/skills';
+import { useTranslation } from '@/i18n';
 
-export default function About() {
+export default async function About({
+  params: { lang }
+}: {
+  params: { lang: string };
+}) {
+  const { t } = await useTranslation(lang, 'about-me');
+
   return (
-    <main>
-      <SectionTitle title="Sobre mim" />
+    <main className="px-16 md:px-0">
+      <SectionTitle title={t('title')} />
       <section className="flex flex-col-reverse gap-10 items-center justify-between md:flex-row">
         <article className="w-full md:w-2/4 flex flex-col gap-5">
           <h1 className="text-white text-3xl">
-            Sou{' '}
-            <span className="text-red-500">Desenvolvedor Web Full Stack</span>
+            {t('i-am')} <span className="text-red-500">{t('position')}</span>
           </h1>
-          <p className="text-white text-2xl">
-            Desde 2018 na área de tecnologia, minha paixão é criar soluções
-            criativas e eficazes para problemas complexos de negócios usando
-            tecnologias de ponta. Eu sou um profissional motivado e
-            colaborativo, que adora trabalhar em equipe para alcançar objetivos
-            ambiciosos.
-          </p>
+          <p className="text-white text-2xl">{t('about-me')}</p>
           <a
             className="p-5 bg-red-500 text-white text-center font-normal text-xl rounded-md max-w-xs transition-all duration-200 hover:bg-red-400"
             href="/CV Alexandre Araujo.pdf"
@@ -33,13 +33,14 @@ export default function About() {
           <Image
             src="/images/profile-photo.jpg"
             alt="Profile Photo"
+            priority
             width={300}
             height={300}
             className="rounded-md"
           />
         </div>
       </section>
-      <SectionTitle title="Minhas Habilidades" />
+      <SectionTitle title={t('my-skills')} />
       <section className="pb-10">
         <ul className="grid grid-cols-auto-fit gap-5">
           {skills.map(({ color, icon: Icon, id, name }) => (
