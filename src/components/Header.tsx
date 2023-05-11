@@ -105,7 +105,7 @@ const Header = ({ lang }: { lang: string }) => {
           initial={false}
           animate={isOpen ? 'open' : 'closed'}
           variants={variants}
-          className="fixed top-0 w-screen bg-black h-screen z-10 p-10"
+          className="fixed top-0 w-screen bg-black h-screen z-50 p-10"
         >
           <button
             onClick={() => setIsOpen(false)}
