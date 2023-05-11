@@ -8,6 +8,8 @@ import { AiFillCaretRight } from 'react-icons/ai';
 import { CgMenuRight } from 'react-icons/cg';
 import { HiOutlineLanguage } from 'react-icons/hi2';
 
+import Logo from './Logo';
+
 import { links } from '@/constants/links';
 import { useTranslation } from '@/i18n/client';
 import { motion } from 'framer-motion';
@@ -29,7 +31,8 @@ const Header = ({ lang }: { lang: string }) => {
 
   return (
     <>
-      <header className="hidden md:flex py-5 w-full justify-end">
+      <header className="hidden md:flex py-5 w-full justify-between items-center">
+        <Logo />
         <nav>
           <ul className="flex items-center gap-4">
             {links.map(({ id, href, icon: Icon, label }) => (
@@ -85,7 +88,10 @@ const Header = ({ lang }: { lang: string }) => {
           </ul>
         </nav>
       </header>
-      <motion.aside className="relative w-full py-5 flex justify-end md:hidden">
+      <motion.aside className="relative w-full py-5 flex justify-between items-center md:hidden">
+        <div className="px-14">
+          <Logo />
+        </div>
         <button
           onClick={() => setIsOpen(true)}
           className="transition-all duration-200 px-14"
