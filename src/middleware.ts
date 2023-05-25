@@ -21,7 +21,6 @@ export function middleware(req: NextRequest) {
 
   if (!lng) lng = fallbackLng;
 
-  // Redirect if lng in path is not supported
   if (
     !languages.some((loc) => req.nextUrl.pathname.startsWith(`/${loc}`)) &&
     !req.nextUrl.pathname.startsWith('/_next')
@@ -31,15 +30,15 @@ export function middleware(req: NextRequest) {
     );
   }
 
-  if (req.headers.has('referer')) {
-    const refererUrl = new URL(req.headers.get('referer') as string);
-    const lngInReferer = languages.find((l) =>
-      refererUrl.pathname.startsWith(`/${l}`)
-    );
-    const response = NextResponse.next();
-    if (lngInReferer) response.cookies.set(cookieName, lngInReferer);
-    return response;
-  }
+  // if (req.headers.has('referer')) {
+  //   const refererUrl = new URL(req.headers.get('referer') as string);
+  //   const lngInReferer = languages.find((l) =>
+  //     refererUrl.pathname.startsWith(`/${l}`)
+  //   );
+  //   const response = NextResponse.next();
+  //   if (lngInReferer) response.cookies.set(cookieName, lngInReferer);
+  //   return response;
+  // }
 
   return NextResponse.next();
 }
