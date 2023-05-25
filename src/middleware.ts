@@ -30,15 +30,15 @@ export function middleware(req: NextRequest) {
     );
   }
 
-  // if (req.headers.has('referer')) {
-  //   const refererUrl = new URL(req.headers.get('referer') as string);
-  //   const lngInReferer = languages.find((l) =>
-  //     refererUrl.pathname.startsWith(`/${l}`)
-  //   );
-  //   const response = NextResponse.next();
-  //   if (lngInReferer) response.cookies.set(cookieName, lngInReferer);
-  //   return response;
-  // }
+  if (req.headers.has('referer')) {
+    const refererUrl = new URL(req.headers.get('referer') as string);
+    const lngInReferer = languages.find((l) =>
+      refererUrl.pathname.startsWith(`/${l}`)
+    );
+    const response = NextResponse.next();
+    if (lngInReferer) response.cookies.set(cookieName, lngInReferer);
+    return response;
+  }
 
   return NextResponse.next();
 }
