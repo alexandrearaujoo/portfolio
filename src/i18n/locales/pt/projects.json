@@ -1,9 +1,17 @@
 {
     "title": "Meus Projetos",
+    "title-all": "Todos Projetos",
     "view-repository": "Ver Repositório",
     "view-website": "Ver Website",
     "see-more": "Ver mais projetos",
     "Project-Manager": "Projeto com intuito de gerenciar seus projetos pessoais inserindo foto de capa, titulo, descrição, links de redirecionameto, atualização e deleção de um projeto para uso próprio no seu portfolio pessoal.",
     "Timeline": "Projeto para criar uma linha do tempo pessoal, nele é possivel fazer login com GitHub, inserir imagem de capa, escrever uma descrição para memória e tornar a memoria publica, isso possibilita o dono da memória compartilha-la com outra pessoa.",
-    "Airbnb": "Clone do site do Airbnb, permite fazer login com Google, GitHub e com credenciais, também é possivel disponibilizar um imóvel próprio para ser alugado, realizar a reserva de um imóvel, diversos filtros por categoria e deleção de um imóvel."
+    "Airbnb": "Clone do site do Airbnb, permite fazer login com Google, GitHub e com credenciais, também é possivel disponibilizar um imóvel próprio para ser alugado, realizar a reserva de um imóvel, diversos filtros por categoria e deleção de um imóvel.",
+    "Netflix": "Clone do site da Netflix, permite fazer cadastro e login com Google, GitHub e credenciais, sistema de autenticação e proteção de rotas privadas.",
+    "Challenge": "Plataforma de desafios, feita para treinar seus conhecimentos na área, possui login com GitHub e só permitido acessar um desafio após estar logado.",
+    "Ascension": "API de um jogo RPG feita em Python com diversas funcionalidades, criação de contas e personagens, compra de itens que somente artesãos podem vender, estoque de itens, missões para subir de nivel.",
+    "Hotel": "Site feito para gerenciamento de um sistemas de hotel, permitindo reservar um quarto, serviços de quarto, gerar um recibo de todos os serviços contrados, gerenciamento de quartos, clientes e funcionários.",
+    "Hotel-API": "API para gerenciamento de um sistemas de hotel feita em NodeJS, permitindo reservar um quarto, serviços de quarto, gerar um recibo de todos os serviços contrados, gerenciamento de quartos, clientes e funcionários.",
+    "Kenzie-Burguer": "Hamburgueria simples feita para aprimorar os conhecimentos em ReactJS com as seguintes features, adicionar produto no carrinho, concluir compra, limpar carrinho e remover um produto específico.",
+    "Nu-Kenzie": "Site feito para gerenciamento de gastos pessoais, possibilitando gerenciar valor de entradas (dinheiro depositado) e despesas (dinheiro retirado)."
 }

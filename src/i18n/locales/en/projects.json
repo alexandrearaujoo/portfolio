@@ -1,9 +1,17 @@
 {
     "title": "My Projects",
+    "title-all": "All Projects",
     "view-repository": "View Repository",
     "view-website": "View Website",
     "see-more": "See more projects",
     "Project-Manager": "Project in order to manage your personal projects by inserting cover photo, title, description, redirect links, update and deletion of a project for your own use in your personal portfolio.",
     "Timeline": "Project to create a personal timeline, in it it is possible to log in with GitHub, insert cover image, write a description to memory and make the memory public, this allows the owner of the memory to share it with another person.",
-    "Airbnb": "Clone of the Airbnb site, allows you to login with Google, GitHub and with credentials, it is also possible to make available a property to be rented, make the reservation of a property, several filters by category and deletion of a property."
+    "Airbnb": "Clone of the Airbnb site, allows you to login with Google, GitHub and with credentials, it is also possible to make available a property to be rented, make the reservation of a property, several filters by category and deletion of a property.",
+    "Netflix": "Clone of the Netflix website, allows you to register and login with Google, GitHub and credentials, authentication system and protection of private routes.",
+    "Challenge": "Challenge platform, made to train your knowledge in the area, has login with GitHub and only allowed to access a challenge after being logged in.",
+    "Ascension": "API of an RPG game made in Python with various features, creation of accounts and characters, purchase of items that only artisans can sell, stock of items, missions to level up.",
+    "Hotel": "Site made for management of a hotel systems, allowing you to book a room, room services, generate a receipt of all contracted services, management of rooms, customers and employees.",
+    "Hotel-API": "API for management of a hotel systems made in NodeJS, allowing you to book a room, room services, generate a receipt for all contracted services, room management, customers and employees.",
+    "Kenzie-Burguer": "Simple burger made to enhance the knowledge in ReactJS with the following features, add product to cart, complete purchase, clean cart and remove a specific product.",
+    "Nu-Kenzie": "Site made for personal expenses management, making it possible to manage the value of entries (money deposited) and expenses (money withdrawn)."
 }

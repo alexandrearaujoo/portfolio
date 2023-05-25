@@ -73,13 +73,21 @@ const Header = ({ lang }: { lang: string }) => {
               {isOpenLanguage && (
                 <div className="absolute top-6 right-0 bg-white shadow-md rounded-md p-2 flex flex-col gap-2">
                   <Link
-                    href={`/en/${pathnameToRedirect}`}
+                    href={
+                      pathName.split('/').length === 4
+                        ? '/en/projects/all'
+                        : `/en/${pathnameToRedirect}`
+                    }
                     className="font-bold transition duration-200 p-1 rounded-md hover:bg-gray-300"
                   >
                     {t('english')}
                   </Link>
                   <Link
-                    href={`/pt/${pathnameToRedirect}`}
+                    href={
+                      pathName.split('/').length === 4
+                        ? '/pt/projects/all'
+                        : `/pt/${pathnameToRedirect}`
+                    }
                     className="font-bold transition duration-200 p-1 rounded-md hover:bg-gray-300"
                   >
                     {t('portuguese')}
