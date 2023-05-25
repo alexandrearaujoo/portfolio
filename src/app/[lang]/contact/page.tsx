@@ -4,7 +4,7 @@ import SendEmailAnimation from '@/components/SendEmailAnimation';
 
 import { useTranslation } from '@/i18n';
 
-export default async function Contatct({
+export default async function Contact({
   params: { lang }
 }: {
   params: { lang: string };

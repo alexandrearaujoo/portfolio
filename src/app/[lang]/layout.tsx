@@ -11,6 +11,8 @@ import { dir } from 'i18next';
 
 const inter = Inter({ subsets: ['latin'] });
 
+export const dynamic = 'force-dynamic';
+
 export const metadata = {
   title: 'Alexandre Araujo | Portfolio',
   description: 'Alexandre Araujo - Software Engineer'
