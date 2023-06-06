@@ -26,13 +26,13 @@ export default async function Projects({
           ))}
         </ul>
       </section>
-      <footer className="block text-center p-3">
+      <footer className="text-center p-3 flex items-center justify-center">
         <Link
           href="/projects/all"
-          className="text-gray-300 text-xl font-semibold border-b-2 border-gray-300 transition-all duration-200 hover:opacity-80"
+          target="_blank"
+          className="flex items-center w-full max-w-[200px] justify-center gap-2 p-4 rounded-md font-semibold text-gray-300 transition-all duration-200 text-md relative z-[1] overflow-hidden border-2 border-red-500 hover:text-white hover:border-red-500 before:content-[''] before:absolute before:-left-[50px] before:top-0 before:w-0 before:h-full before:bg-red-500 before:-z-[1] before:transition-all before:duration-1000 hover:before:w-[250%] before:skew-x-[45deg]"
         >
-          {t('see-more').split(' ')[0]} {t('see-more').split(' ')[1]}{' '}
-          <span className="text-red-500">{t('see-more').split(' ')[2]}</span>
+          {t('see-more')}
         </Link>
       </footer>
     </main>
