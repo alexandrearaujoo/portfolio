@@ -4,6 +4,7 @@
     "view-repository": "View Repository",
     "view-website": "View Website",
     "see-more": "See more projects",
+    "Genius": "Site made to exploit the power of AI's, being able to conves, generate code, images, videos and music, also includes a PRO plan to use the tool unlimitedly.",
     "Project-Manager": "Project in order to manage your personal projects by inserting cover photo, title, description, redirect links, update and deletion of a project for your own use in your personal portfolio.",
     "Timeline": "Project to create a personal timeline, in it it is possible to log in with GitHub, insert cover image, write a description to memory and make the memory public, this allows the owner of the memory to share it with another person.",
     "Airbnb": "Clone of the Airbnb site, allows you to login with Google, GitHub and with credentials, it is also possible to make available a property to be rented, make the reservation of a property, several filters by category and deletion of a property.",
